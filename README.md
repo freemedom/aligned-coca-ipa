@@ -33,3 +33,20 @@ same a}eɪ
 place a}eɪ
 等
 ```
+
+
+```
+请输入模式，输入0为输入1个字母查找音标，输入1为输入1个音标查找字母，输入2为输入2个字母查找音标：2
+输入所需查找的2个字母：ci
+---------------------------
+ʃ
+59
+---------------------------
+social c|i}ʃ
+especially c|i}ʃ
+special c|i}ʃ
+official c|i}ʃ
+financial c|i}ʃ
+commercial c|i}ʃ
+politician c|i}ʃ
+```
