@@ -30,10 +30,12 @@ for line in lines:
                 dict_print[key].append(ll[0] + " " + ll[i])
                 # print(ll[0] + " " + i)
         if mode == '2':
-            if i == len(ll)-1:
-                break
             grapheme_phoneme = ll[i].split("}")
-            grapheme_phoneme_2 = ll[i + 1].split("}")
+            if i != len(ll) - 1:
+                grapheme_phoneme_2 = ll[i + 1].split("}")
+            else:
+                grapheme_phoneme_2 = ['@','@']
+                # grapheme_phoneme_2 = ''
             app = ''
             if g_p[0] in grapheme_phoneme[0][-1] and g_p[1] in grapheme_phoneme_2[0][0]:
                 key = grapheme_phoneme[1]+grapheme_phoneme_2[1]
