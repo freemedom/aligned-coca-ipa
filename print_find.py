@@ -43,6 +43,7 @@ for line in lines:
                 len_space = j - i + 1
                 if len_space == g_p_len:#这个条件必须后判断，有|的存在，len_space的终止长度是不确定的
                     break
+        # 更简单的思路或许是将e|a}i 这样的情况分成e}i和a}i e和a都对应一个e|a}i，最后去重即可；这样就可以直接子字符串判断了，不需要考虑多变的长度问题。。。
     else:
         for i in range(1, len(ll)):
             #
