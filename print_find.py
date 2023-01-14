@@ -33,12 +33,15 @@ for line in lines:
                 substr_phoneme += ll[j].split("}")[1]
                 substr_total += " " + ll[j]
 
-                if len(substr_grapheme) >= g_p_len:
-                    if g_p in substr_grapheme:
-                        key = substr_phoneme
-                        if key not in dict_print:
-                            dict_print[key] = []
-                        dict_print[key].append(ll[0] + substr_total)
+                if g_p in substr_grapheme:
+                    key = substr_phoneme
+                    if key not in dict_print:
+                        dict_print[key] = []
+                    dict_print[key].append(ll[0] + substr_total)
+                    break
+                # 需要改这句，否则会出现league g|u占了两个长度
+                len_space = j - i + 1
+                if len_space == g_p_len:#这个条件必须后判断，有|的存在，len_space的终止长度是不确定的
                     break
     else:
         for i in range(1, len(ll)):
