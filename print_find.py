@@ -25,6 +25,9 @@ for line in lines:
             substr_phoneme = ""
             substr_total = ""
 
+            if g_p[0] not in ll[i].split("}")[0].replace('|', ''):
+                continue#第一个必须存在，防止出现lea-please p}p l}l e|a}i这样的情况
+
             for j in range(i, len(ll)):
                 substr_grapheme += ll[j].split("}")[0].replace('|', '')
                 substr_phoneme += ll[j].split("}")[1]
