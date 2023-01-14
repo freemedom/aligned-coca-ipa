@@ -57,6 +57,8 @@ for tuple in dict_print_list:
     print("---------------------------")
     print(tuple[0])
     print(len(tuple[1]))
-    print("---------------------------")
+    print("+++++++++++++++++++++++++++")
     for i in tuple[1]:
         print(i)
+
+#r}.{1,3}e}.{1,3}o}.{1,2}
