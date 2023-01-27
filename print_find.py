@@ -10,6 +10,15 @@ with open('g2p_coca_ipa_withoutstress.txt', 'r', encoding='utf-8') as f:  # gbk�
     lines = f.read().split('\n')
 
 #
+# 重定向print到文件
+import sys
+file_path = 'print_find.txt'
+sys.stdout = open(file_path, "w",encoding='utf-8')#不能放在最前边，否则input()的输出就没了
+
+#
+# European 转小写
+
+#
 #
 # g_p = "i"
 dict_print = {}
