@@ -95,7 +95,7 @@ for line in lines:
                     key = grapheme_phoneme[1 - int(mode)]
                     if key not in dict_print:
                         dict_print[key] = []
-                    dict_print[key].append(line + " || " + ll[i])# 同一个单词里有多个g_p的话，就分不清是哪个
+                    dict_print[key].append(line + "  |  " + ll[i])# 同一个单词里有多个g_p的话，就分不清是哪个
                     # print(ll[0] + " " + i)
             # if mode == '2':
             #     grapheme_phoneme = ll[i].split("}")
