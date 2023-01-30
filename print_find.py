@@ -1,3 +1,5 @@
+import re
+
 mode = input("请输入模式，输入0为输入1个字母查找音标，输入1为输入1个音标查找字母\n"
              "输入2为输入2及以上个字母查找音标，输入3为输入2及以上个音标查找字母：")
 if mode == '0':
@@ -83,7 +85,7 @@ for line in lines:
 
     #    offer o}ɔ f|f}f e|r}ɚ
     else:
-        for i in range(1, len(ll)):
+        for i in range(1, len(ll)):# 这里同一个单词内的多个g_p分成了多行append进
             #
             #
             if mode == '0' or mode == '1':
@@ -116,14 +118,25 @@ for line in lines:
             #         dict_print[key].append(ll[0] + " " + ll[i])
 
 
-
+#
 print("\n\n\n@@")
+
+# 求总数量，计算百分比
+# 正则过滤
+re_str = ""#"^.y"
+len_total = 0
+for k, v_list in dict_print.items():
+    # print(k,">>",v)
+    for line in v_list[:]:
+        if re_str and (re.match(re_str, line.split()[0]) == None):
+            v_list.remove(line)
+    len_total += len(v_list)
 #
 dict_print_list = sorted(dict_print.items(), key=lambda kv: len(kv[1]), reverse=True)
 for tuple in dict_print_list:
     print("---------------------------")
     print(tuple[0])
-    print(len(tuple[1]))
+    print(len(tuple[1]),len(tuple[1])/len_total)
     print("+++++++++++++++++++++++++++")
     for i in tuple[1]:
         print(i)
