@@ -123,9 +123,14 @@ print("\n\n\n@@")
 
 # 求总数量，计算百分比
 # 正则过滤
-
-# re_str = ""
 # re_str = "^se"
+try:
+    if re_str:
+        print(1)
+except:
+    re_str = ""
+# re_str = ""
+
 len_total = 0
 for k, v_list in dict_print.items():
     # print(k,">>",v)
