@@ -123,8 +123,9 @@ print("\n\n\n@@")
 
 # 求总数量，计算百分比
 # 正则过滤
+
 # re_str = ""
-re_str = "^.y"
+# re_str = "^se"
 len_total = 0
 for k, v_list in dict_print.items():
     # print(k,">>",v)
@@ -136,8 +137,8 @@ for k, v_list in dict_print.items():
 dict_print_list = sorted(dict_print.items(), key=lambda kv: len(kv[1]), reverse=True)
 for tuple in dict_print_list:
     print("---------------------------")
-    print(tuple[0])
-    print(len(tuple[1]),len(tuple[1])/len_total)
+    # print(tuple[0])
+    print(tuple[0],len(tuple[1]),len(tuple[1])/len_total)
     print("+++++++++++++++++++++++++++")
     for i in tuple[1]:
         print(i)
