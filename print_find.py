@@ -123,7 +123,7 @@ print("\n\n\n@@")
 
 # 求总数量，计算百分比
 # 正则过滤
-# re_str = "^se"
+re_str = "^.al"
 try:
     if re_str:
         print(1)
@@ -143,7 +143,7 @@ dict_print_list = sorted(dict_print.items(), key=lambda kv: len(kv[1]), reverse=
 for tuple in dict_print_list:
     print("---------------------------")
     # print(tuple[0])
-    print(tuple[0],len(tuple[1]),len(tuple[1])/len_total)
+    print(tuple[0],len(tuple[1]),round(len(tuple[1])/len_total,3))
     print("+++++++++++++++++++++++++++")
     for i in tuple[1]:
         print(i)
