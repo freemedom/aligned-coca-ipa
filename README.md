@@ -37,7 +37,7 @@ perception p}p e|r}ɚ
 perceive p}p e|r}ɚ
 permission p}p e|r}ɚ
 persuade p}p e|r}ɚ
-等\(等\)
+等
 ```
 
 
